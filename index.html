@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="website icon" type="png" href="assets/imgs/R.png" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sass/style.css" />
+    <script defer src="js/data.js"></script>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <audio
+      id="audio"
+      src="assets/audio/ديدو_ أغنية تركية حزينة بصوت رائع _ Amorf - Dido(MP3_160K).mp3"
+    ></audio>
+    <header>
+      <div class="container">
+        <div class="head">
+          <h2>music</h2>
+          <div class="search">
+            <span class="material-icons-outlined"> search </span>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a class="active" id="songs" href="#">songs</a></li>
+            <li><a id="favourites" href="#">favourites</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="type">
+        <p id="listType">all songs</p>
+        <div class="sort">
+          <span class="material-icons-outlined"> sort </span>
+          <small>time</small>
+        </div>
+      </div>
+    </header>
+    <main>
+      <ul class="songs"></ul>
+      <ul class="favourites"></ul>
+    </main>
+    <footer >
+      <div class="container">
+        <div class="player-head">
+          <span class="material-icons-outlined expand"> expand_more </span>
+          <h2>player</h2>
+          <small></small>
+        </div>
+        <div class="img-info">
+          <div class="footer-song-img">
+            <img id="footer-song-img" src="assets/imgs/dido.jpg" alt="ALT" />
+          </div>
+          <div class="footer-song-info">
+            <p class="footer-song-name">
+              ديدو_ أغنية تركية حزينة بصوت رائع _ Amorf - Dido
+            </p>
+            <p class="footer-song-artist">Amorf</p>
+          </div>
+        </div>
+        <div class="sideControls">
+          <span class="material-icons-outlined"> wallpaper </span>
+          <span class="material-icons-outlined" id="favBtn">
+            favorite_border
+          </span>
+          <span class="material-icons-outlined"> delete </span>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar" min="0" value="0" />
+          <div class="timing">
+            <span class="currentTime">00:00</span>
+            <span class="duration">00:00</span>
+          </div>
+        </div>
+        <div class="footer-controls">
+          <span id="shuffle" class="material-icons-outlined"> repeat </span>
+          <span id="prev" class="material-icons"> skip_previous </span>
+          <span id="play" class="material-icons"> play_arrow </span>
+          <span id="next" class="material-icons"> skip_next </span>
+          <span id="playlist" class="material-icons-outlined">
+            queue_music
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

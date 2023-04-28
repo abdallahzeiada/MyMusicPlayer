@@ -1,0 +1,121 @@
+header {
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $main-background-color;
+  .container {
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h2 {
+        color: $main-text-color;
+        text-transform: uppercase;
+        font-weight: 900;
+      }
+      .search {
+        width: 35px;
+        height: 35px;
+        background-color: $main-background-color;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border: 3px solid $orange-red;
+        transition: all 0.3s;
+        span {
+          display: block;
+          display: flex;
+          font-weight: bold;
+          justify-content: center;
+          align-items: center;
+          color: $orange-red;
+        }
+        &:hover {
+          width: 150px;
+          justify-content: flex-start;
+        }
+      }
+    }
+    nav {
+      margin-top: 20px;
+      ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        li {
+          padding: 5px 0;
+          a {
+            display: block;
+            color: $sub-text-color;
+            font-weight: bold;
+            padding: 5px 0;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            text-transform: capitalize;
+            font-size: 14px;
+            position: relative;
+            margin-right: 20px;
+            transition: all 0.3s;
+            &::after {
+              content: " ";
+              position: absolute;
+              bottom: -3px;
+              transition: all 0.3s;
+              left: -3px;
+              width: 0;
+              height: 2px;
+              background-color: $orange-red;
+              border-radius: 20px;
+            }
+            &:hover::after {
+              width: 110%;
+            }
+            &:hover {
+              color: $main-text-color;
+            }
+          }
+          .active {
+            color: $main-text-color;
+            &::after {
+              width: 110%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 5px $box-shadow-color;
+    padding: 15px 20px;
+    margin-top: 10px;
+    p {
+      color: $main-text-color;
+      text-transform: capitalize;
+      font-weight: bold;
+      font-family: cursive;
+    }
+    .sort {
+      display: flex;
+      align-items: center;
+      span {
+        color: $orange-red;
+        margin-right: 10px;
+      }
+      small {
+        text-transform: capitalize;
+        font-size: 12px;
+        font-family: cursive;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        color: $sub-text-color;
+      }
+    }
+  }
+}
